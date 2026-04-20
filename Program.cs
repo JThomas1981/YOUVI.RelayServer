@@ -44,4 +44,5 @@ app.UseCors("AllowAll");
 app.MapGet("/", () => "YOUVI Relay Server");
 app.MapHub<CallRoomHub>("/callRoomHub");
 
+Console.WriteLine($">>> Starting on port: {port} (PORT env var: '{Environment.GetEnvironmentVariable("PORT") ?? "not set"}')");
 app.Run();
